@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Coaching</title>
+
+  <!-- Verbindung zur CSS Datei -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar" aria-label="Hauptnavigation">
+
+  <div class="nav-links">
+    <a href="#ueber-mich" data-i18n="nav_ueber">Über mich</a>
+    <a href="#methodik" data-i18n="nav_methodik">Methodik</a>
+    <a href="#preise" data-i18n="nav_preise">Preise</a>
+    <a href="#ergebnisse" data-i18n="nav_ergebnisse">Ergebnisse</a>
+    <a href="#bewertungen" data-i18n="nav_bewertungen">Bewertungen</a>
+    <a href="#faq" data-i18n="nav_faq">FAQ</a>
+    <a href="#kontakt" class="kontakt-button" data-i18n="nav_kontakt">Kontakt</a>
+  </div>
+
+  <!-- Sprachwechsler -->
+  <div class="sprache" aria-label="Sprachauswahl">
+    <button type="button" onclick="spracheWechseln('de')" aria-label="Deutsch auswählen">🇩🇪</button>
+    <button type="button" onclick="spracheWechseln('en')" aria-label="Englisch auswählen">🇬🇧</button>
+    <button type="button" onclick="spracheWechseln('ru')" aria-label="Russisch auswählen">🇷🇺</button>
+  </div>
+
+</nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <h1 data-i18n="hero_titel">Dein Weg zum stärksten Ich</h1>
+    <p data-i18n="hero_text">Professionelles Personal Coaching – individuell, nachhaltig, effektiv.</p>
+    <a href="#kontakt" class="btn" data-i18n="hero_btn" aria-label="Zum Kontaktformular springen">
+    Jetzt starten
+    </a>
+</section>
+
+  <!-- ÜBER MICH -->
+<section id="ueber-mich">
+  <div class="ueber-container">
+
+    <!-- Foto links -->
+    <div class="ueber-foto">
+      <img src="images/coach.jpg.PNG" alt="Foto des Personal Trainers" />
+    </div>
+
+    <!-- Text rechts -->
+    <div class="ueber-text">
+      <h2 data-i18n="ueber_titel">Über mich</h2>
+      <p data-i18n="ueber_text">Ich bin zertifizierter Personal Trainer mit über 5 Jahren Erfahrung.</p>
+
+      <ul class="ueber-fakten">
+        <li data-i18n="ueber_fakt1">✅ Zertifizierter Personal Trainer</li>
+        <li data-i18n="ueber_fakt2">✅ Über 100 erfolgreiche Kunden</li>
+        <li data-i18n="ueber_fakt3">✅ Spezialist für Muskelaufbau & Fettabbau</li>
+        <li data-i18n="ueber_fakt4">✅ Online & Vor-Ort Coaching</li>
+      </ul>
+
+      <a href="#kontakt" class="btn" data-i18n="ueber_btn">Kostenlos beraten lassen</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- METHODIK -->
+<section id="methodik">
+  <h2 data-i18n="methodik_titel">Meine Methodik</h2>
+
+  <div class="methodik-container">
+
+    <!-- Schritt 1 -->
+    <div class="methodik-karte">
+      <div class="methodik-nummer">01</div>
+      <h3 data-i18n="methodik_s1_titel">Analyse</h3>
+      <p data-i18n="methodik_s1_text">Wir analysieren deinen aktuellen Stand – Körper, Ernährung und Ziele.</p>
+    </div>
+
+    <!-- Schritt 2 -->
+    <div class="methodik-karte">
+      <div class="methodik-nummer">02</div>
+      <h3 data-i18n="methodik_s2_titel">Planung</h3>
+      <p data-i18n="methodik_s2_text">Ich erstelle deinen individuellen Trainings- und Ernährungsplan.</p>
+    </div>
+
+    <!-- Schritt 3 -->
+    <div class="methodik-karte">
+      <div class="methodik-nummer">03</div>
+      <h3 data-i18n="methodik_s3_titel">Training</h3>
+      <p data-i18n="methodik_s3_text">Wir trainieren zusammen – motiviert, strukturiert und effektiv.</p>
+    </div>
+
+    <!-- Schritt 4 -->
+    <div class="methodik-karte">
+      <div class="methodik-nummer">04</div>
+      <h3 data-i18n="methodik_s4_titel">Ergebnisse</h3>
+      <p data-i18n="methodik_s4_text">Du siehst echte Ergebnisse – nachhaltig und langfristig.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PREISE -->
+<section id="preise">
+  <h2 data-i18n="preise_titel">Pakete & Preise</h2>
+  <div class="preise-container">
+
+    <!-- Paket 1 -->
+    <div class="preis-karte">
+      <h3 data-i18n="paket1_name">Starter</h3>
+      <div class="preis">€99<span data-i18n="pro_monat">/Monat</span></div>
+      <ul>
+        <li data-i18n="paket1_l1">✅ 4x Training pro Monat</li>
+        <li data-i18n="paket1_l2">✅ Trainingsplan</li>
+        <li data-i18n="paket1_l3">✅ WhatsApp Support</li>
+        <li data-i18n="paket1_l4">❌ Ernährungsplan</li>
+        <li data-i18n="paket1_l5">❌ Video Analyse</li>
+      </ul>
+      <a href="#kontakt" class="btn" data-i18n="paket_btn">Jetzt buchen</a>
+    </div>
+
+    <!-- Paket 2 – hervorgehoben -->
+    <div class="preis-karte beliebt">
+      <div class="beliebt-badge" data-i18n="beliebt">⭐ Beliebtestes Paket</div>
+      <h3 data-i18n="paket2_name">Performance</h3>
+      <div class="preis">€179<span data-i18n="pro_monat">/Monat</span></div>
+      <ul>
+        <li data-i18n="paket2_l1">✅ 8x Training pro Monat</li>
+        <li data-i18n="paket2_l2">✅ Trainingsplan</li>
+        <li data-i18n="paket2_l3">✅ WhatsApp Support</li>
+        <li data-i18n="paket2_l4">✅ Ernährungsplan</li>
+        <li data-i18n="paket2_l5">❌ Video Analyse</li>
+      </ul>
+      <a href="#kontakt" class="btn" data-i18n="paket_btn">Jetzt buchen</a>
+    </div>
+
+    <!-- Paket 3 -->
+    <div class="preis-karte">
+      <h3 data-i18n="paket3_name">Elite</h3>
+      <div class="preis">€279<span data-i18n="pro_monat">/Monat</span></div>
+      <ul>
+        <li data-i18n="paket3_l1">✅ 12x Training pro Monat</li>
+        <li data-i18n="paket3_l2">✅ Trainingsplan</li>
+        <li data-i18n="paket3_l3">✅ 24/7 WhatsApp Support</li>
+        <li data-i18n="paket3_l4">✅ Ernährungsplan</li>
+        <li data-i18n="paket3_l5">✅ Video Analyse</li>
+      </ul>
+      <a href="#kontakt" class="btn" data-i18n="paket_btn">Jetzt buchen</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ERGEBNISSE -->
+<section id="ergebnisse">
+  <h2 data-i18n="ergebnisse_titel">Vorher & Nachher</h2>
+  <p data-i18n="ergebnisse_text">Echte Ergebnisse meiner Kunden – hart erarbeitet, nachhaltig erreicht.</p>
+
+  <div class="ergebnisse-container">
+
+    <!-- Kunde 1 -->
+    <div class="ergebnis-karte">
+      <img src="images/Client_1.jpg" alt="Vorher Nachher Kunde 1" />
+      <p class="ergebnis-info" data-i18n="ergebnis1">Max, 34 Jahre – 12 kg abgenommen in 3 Monaten</p>
+    </div>
+
+    <!-- Kunde 2 -->
+    <div class="ergebnis-karte">
+      <img src="images/Client_2.jpg" alt="Vorher Nachher Kunde 2" />
+      <p class="ergebnis-info" data-i18n="ergebnis2">Lisa, 28 Jahre – 8 kg abgenommen in 2 Monaten</p>
+    </div>
+
+    <!-- Kunde 3 -->
+    <div class="ergebnis-karte">
+      <img src="images/Client_3.jpg" alt="Vorher Nachher Kunde 3" />
+      <p class="ergebnis-info" data-i18n="ergebnis3">Tom, 41 Jahre – 15 kg abgenommen in 4 Monaten</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- BEWERTUNGEN -->
+<section id="bewertungen">
+  <h2 data-i18n="bewertungen_titel">Das sagen meine Kunden</h2>
+
+  <div class="bewertungen-container">
+
+    <!-- Bewertung 1 -->
+    <div class="bewertung-karte">
+      <div class="sterne">⭐⭐⭐⭐⭐</div>
+      <p data-i18n="bewertung1_text">"Ich habe in 3 Monaten 12 kg abgenommen – ich hätte das nie für möglich gehalten. Der beste Trainer den ich je hatte!"</p>
+      <div class="bewertung-autor">
+        <strong data-i18n="bewertung1_name">Max M., 34 Jahre</strong>
+      </div>
+    </div>
+
+    <!-- Bewertung 2 -->
+    <div class="bewertung-karte">
+      <div class="sterne">⭐⭐⭐⭐⭐</div>
+      <p data-i18n="bewertung2_text">"Endlich ein Trainer der auf mich als Person eingeht. Der Ernährungsplan war ein Gamechanger!"</p>
+      <div class="bewertung-autor">
+        <strong data-i18n="bewertung2_name">Lisa K., 28 Jahre</strong>
+      </div>
+    </div>
+
+    <!-- Bewertung 3 -->
+    <div class="bewertung-karte">
+      <div class="sterne">⭐⭐⭐⭐⭐</div>
+      <p data-i18n="bewertung3_text">"Professionell, motivierend und immer erreichbar. Absolute Empfehlung!"</p>
+      <div class="bewertung-autor">
+        <strong data-i18n="bewertung3_name">Tom S., 41 Jahre</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2 data-i18n="faq_titel">Häufige Fragen</h2>
+
+  <div class="faq-container">
+
+    <!-- Frage 1 -->
+    <div class="faq-item">
+      <button class="faq-frage" onclick="faqToggle(this)">
+        <span data-i18n="faq1_frage">Für wen ist das Coaching geeignet?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-antwort">
+        <p data-i18n="faq1_antwort">Mein Coaching ist für alle geeignet – egal ob Anfänger oder Fortgeschrittener. Wir starten immer da wo du gerade stehst.</p>
+      </div>
+    </div>
+
+    <!-- Frage 2 -->
+    <div class="faq-item">
+      <button class="faq-frage" onclick="faqToggle(this)">
+        <span data-i18n="faq2_frage">Wie läuft das Online Coaching ab?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-antwort">
+        <p data-i18n="faq2_antwort">Du bekommst deinen persönlichen Trainings- und Ernährungsplan per App. Wir kommunizieren täglich über WhatsApp und haben wöchentliche Video-Calls.</p>
+      </div>
+    </div>
+
+    <!-- Frage 3 -->
+    <div class="faq-item">
+      <button class="faq-frage" onclick="faqToggle(this)">
+        <span data-i18n="faq3_frage">Wie schnell sehe ich Ergebnisse?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-antwort">
+        <p data-i18n="faq3_antwort">Die meisten Kunden sehen erste Ergebnisse bereits nach 2-4 Wochen. Nachhaltige Veränderungen entstehen in 3-6 Monaten.</p>
+      </div>
+    </div>
+
+    <!-- Frage 4 -->
+    <div class="faq-item">
+      <button class="faq-frage" onclick="faqToggle(this)">
+        <span data-i18n="faq4_frage">Kann ich das Paket jederzeit kündigen?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-antwort">
+        <p data-i18n="faq4_antwort">Ja, alle Pakete sind monatlich kündbar. Keine versteckten Kosten, keine langen Vertragslaufzeiten.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <section id="kontakt" class="kontakt-section">
+  <div class="kontakt-container">
+
+    <div class="kontakt-info">
+      <h2>Kontakt</h2>
+      <p class="kontakt-text">
+        Schreib mir – ich melde mich innerhalb von 24 Stunden bei dir!
+      </p>
+
+      <div class="info-box">
+        <p>👤 <strong>Mert Güngör</strong></p>
+        <p>📍 Augsburg, Deutschland</p>
+        <p>📱 +49 123 456 789</p>
+        <p>✉️ info@fitcoach.de</p>
+        <p>🕒 Mo–Fr, 08:00–20:00 Uhr</p>
+        <p>📸 <strong>@mertdayi</strong></p>
+      </div>
+    </div>
+
+    <form class="kontakt-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="anrede">Anrede</label>
+          <select id="anrede" name="anrede">
+            <option value="">Bitte auswählen</option>
+            <option value="herr">Herr</option>
+            <option value="frau">Frau</option>
+            <option value="divers">Divers</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Max Mustermann">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" placeholder="max@beispiel.de">
+      </div>
+
+      <div class="form-group">
+        <label for="ziel">Dein Ziel</label>
+        <select id="ziel" name="ziel">
+          <option value="">Bitte auswählen</option>
+          <option value="abnehmen">Abnehmen</option>
+          <option value="muskelaufbau">Muskelaufbau</option>
+          <option value="fitness">Allgemeine Fitness</option>
+          <option value="ernaehrung">Ernährungsberatung</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="nachricht">Nachricht</label>
+        <textarea id="nachricht" name="nachricht" placeholder="Schreib mir kurz, wobei ich dir helfen kann..."></textarea>
+      </div>
+
+      <button type="submit">Nachricht senden</button>
+    </form>
+
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p data-i18n="footer_text">© 2026 FitCoach – Alle Rechte vorbehalten</p>
+  </footer>
+
+  <!-- Verbindung zur JavaScript Datei -->
+  <script src="script.js"></script>
+
+</body>
+</html>
