@@ -2027,3 +2027,119 @@ body.kontrast .supplement-karte p {
     max-width: 95%;
   }
 }
+
+/* ===== FINALER MOBILE FEINSCHLIFF ===== */
+@media (max-width: 850px) {
+
+  /* Allgemeine mobile Abstände */
+  section {
+    padding: 64px 24px;
+  }
+
+  /* Einheitliche Überschriften */
+  section h2,
+  #gratis-plaene h2,
+  #supplements h2,
+  #bewertungen h2,
+  #faq h2,
+  #kontakt h2 {
+    font-size: 32px;
+    line-height: 1.18;
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  /* Beschreibungstexte ruhiger */
+  section p,
+  .gratis-text,
+  .supplements-text,
+  .kontakt-text {
+    font-size: 17px;
+    line-height: 1.65;
+    text-align: center;
+  }
+
+  /* Kartenabstände vereinheitlichen */
+  .preis-karte,
+  .gratis-karte,
+  .supplement-karte,
+  .bewertung-karte,
+  .methodik-karte {
+    padding: 32px 24px;
+    border-radius: 20px;
+  }
+
+  /* Container mit gleichmäßigem Abstand */
+  .preise-container,
+  .gratis-container,
+  .supplements-container,
+  .bewertungen-container,
+  .methodik-container {
+    gap: 28px;
+  }
+
+  /* PDF-Reihen auf Handy etwas kompakter */
+  .pdf-row {
+    padding: 14px;
+  }
+
+  .pdf-row span {
+    font-size: 16px;
+  }
+
+  .pdf-row a {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+  /* Supplement-Code auf Handy schöner */
+  .supplement-code-box {
+    max-width: 340px;
+    padding: 18px 16px;
+  }
+
+  .supplement-code-box strong {
+    font-size: 22px;
+  }
+
+  /* Bewertungen besser lesbar */
+  .bewertung-karte p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* Unten mehr Platz wegen Floating Buttons */
+  body {
+    padding-bottom: 90px;
+  }
+}
+
+/* ===== FLOAT BUTTONS MOBILE FINAL ===== */
+@media (max-width: 850px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    right: 18px;
+    bottom: 22px;
+    font-size: 23px;
+  }
+
+  #back-to-top {
+    width: 48px;
+    height: 48px;
+    right: 18px;
+    bottom: 84px;
+    font-size: 20px;
+  }
+
+  .accessibility-menu {
+    left: 18px;
+    bottom: 22px;
+  }
+
+  .accessibility-menu > button {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+}
