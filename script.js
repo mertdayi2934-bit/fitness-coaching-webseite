@@ -99,6 +99,17 @@ const uebersetzungen = {
     ziel_muskel:      "Muskelaufbau",
     ziel_fitness:     "Allgemeine Fitness",
     ziel_ernaehrung:  "Ernährungsberatung",
+    nav_supplements: "Supplements",
+    supplements_titel: "Empfohlene Supplements",
+    supplements_text: "Ergänze dein Training sinnvoll mit ausgewählten Supplements. Mit dem Code FITNESSMERT erhältst du bis zu 30 % Rabatt.",
+    supplements_code_label: "Dein Rabattcode:",
+    supplements_btn: "Supplements ansehen",
+    supplement1_titel: "Protein",
+    supplement1_text: "Unterstützt Muskelaufbau und Regeneration nach dem Training.",
+    supplement2_titel: "Pre-Workout",
+    supplement2_text: "Für mehr Fokus, Energie und Motivation vor intensiven Einheiten.",
+    supplement3_titel: "Basics",
+    supplement3_text: "Sinnvolle Grundlagen wie Kreatin, Omega-3 oder Vitamine.",
 },
 
   en: {
@@ -198,6 +209,17 @@ const uebersetzungen = {
     ziel_muskel:      "Muscle gain",
     ziel_fitness:     "General fitness",
     ziel_ernaehrung:  "Nutrition advice",
+    nav_supplements: "Supplements",
+    supplements_titel: "Recommended Supplements",
+    supplements_text: "Support your training with selected supplements. Use code FITNESSMERT for up to 30% off.",
+    supplements_code_label: "Your discount code:",
+    supplements_btn: "View supplements",
+    supplement1_titel: "Protein",
+    supplement1_text: "Supports muscle growth and recovery after training.",
+    supplement2_titel: "Pre-Workout",
+    supplement2_text: "For more focus, energy and motivation before intense sessions.",
+    supplement3_titel: "Basics",
+    supplement3_text: "Useful essentials such as creatine, omega-3 or vitamins.",
 },
 
   ru: {
@@ -297,6 +319,17 @@ const uebersetzungen = {
     ziel_muskel:      "Набор мышц",
     ziel_fitness:     "Общий фитнес",
     ziel_ernaehrung:  "Консультация по питанию",
+    nav_supplements: "Добавки",
+    supplements_titel: "Рекомендуемые добавки",
+    supplements_text: "Поддержи свои тренировки с помощью выбранных добавок. Используй код FITNESSMERT и получи скидку до 30%.",
+    supplements_code_label: "Твой промокод:",
+    supplements_btn: "Посмотреть добавки",
+    supplement1_titel: "Протеин",
+    supplement1_text: "Поддерживает рост мышц и восстановление после тренировки.",
+    supplement2_titel: "Предтреник",
+    supplement2_text: "Для большего фокуса, энергии и мотивации перед интенсивными тренировками.",
+    supplement3_titel: "База",
+    supplement3_text: "Полезные основы, такие как креатин, омега-3 или витамины.",
 }
 
 };

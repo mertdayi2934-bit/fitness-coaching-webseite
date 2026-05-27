@@ -22,6 +22,8 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
+<body>
+
 <!-- NAVIGATION -->
 <nav class="navbar" aria-label="Hauptnavigation">
 
@@ -45,6 +47,7 @@
       <a href="#methodik" data-i18n="nav_methodik">Methodik</a>
       <a href="#preise" data-i18n="nav_preise">Preise</a>
       <a href="#gratis-plaene" data-i18n="nav_gratis">Gratis Pläne</a>
+      <a href="#supplements" data-i18n="nav_supplements">Supplements</a>
       <a href="#ergebnisse" data-i18n="nav_ergebnisse">Ergebnisse</a>
       <a href="#bewertungen" data-i18n="nav_bewertungen">Bewertungen</a>
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
@@ -58,16 +61,6 @@
       <button type="button" onclick="spracheWechseln('ru')" aria-label="Russisch auswählen">🇷🇺</button>
     </div>
 
-  </div>
-
-</nav>
-
-  <!-- Sprachwechsler -->
-  <div class="sprach
-  e" aria-label="Sprachauswahl">
-    <button type="button" onclick="spracheWechseln('de')" aria-label="Deutsch auswählen">🇩🇪</button>
-    <button type="button" onclick="spracheWechseln('en')" aria-label="Englisch auswählen">🇬🇧</button>
-    <button type="button" onclick="spracheWechseln('ru')" aria-label="Russisch auswählen">🇷🇺</button>
   </div>
 
 </nav>
@@ -209,7 +202,8 @@
     <div class="gratis-karte">
       <div class="gratis-icon">
         <img src="images/gym-icon.png" alt="Symbol für Fitnessstudio Trainingsplan">
-</div>
+      </div>
+
       <h3 data-i18n="gratis_fitnessstudio_titel">Trainingsplan Fitnessstudio</h3>
       <p data-i18n="gratis_fitnessstudio_text">
         3 Tage pro Woche, ideal für Einsteiger im Gym.
@@ -246,7 +240,8 @@
     <div class="gratis-karte">
       <div class="gratis-icon">
         <img src="images/home-icon.png" alt="Symbol für Zuhause Trainingsplan">
-</div>
+      </div>
+
       <h3 data-i18n="gratis_zuhause_titel">Trainingsplan Zuhause</h3>
       <p data-i18n="gratis_zuhause_text">
         Effektives Training ohne Geräte – perfekt für zu Hause.
@@ -283,7 +278,8 @@
     <div class="gratis-karte">
       <div class="gratis-icon">
         <img src="images/nutrition-icon.png" alt="Symbol für Ernährungsplan">
-</div>  
+      </div>
+
       <h3 data-i18n="gratis_ernaehrung_titel">Ernährungsplan</h3>
       <p data-i18n="gratis_ernaehrung_text">
         Ein einfacher Leitfaden für gesunde Ernährung und bessere Ergebnisse.
@@ -314,6 +310,56 @@
           </div>
         </div>
       </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SUPPLEMENTS -->
+<section id="supplements">
+  <h2 data-i18n="supplements_titel">Empfohlene Supplements</h2>
+  <p class="supplements-text" data-i18n="supplements_text">
+    Ergänze dein Training sinnvoll mit ausgewählten Supplements. Mit dem Code FITNESSMERT erhältst du bis zu 30 % Rabatt.
+  </p>
+
+  <div class="supplement-code-box">
+    <span data-i18n="supplements_code_label">Dein Rabattcode:</span>
+    <strong>FITNESSMERT</strong>
+  </div>
+
+  <div class="supplements-container">
+
+    <div class="supplement-karte">
+      <div class="supplement-icon">🥤</div>
+      <h3 data-i18n="supplement1_titel">Protein</h3>
+      <p data-i18n="supplement1_text">
+        Unterstützt Muskelaufbau und Regeneration nach dem Training.
+      </p>
+      <a href="https://www.esn.com/" target="_blank" class="btn" data-i18n="supplements_btn">
+        Supplements ansehen
+      </a>
+    </div>
+
+    <div class="supplement-karte">
+      <div class="supplement-icon">⚡</div>
+      <h3 data-i18n="supplement2_titel">Pre-Workout</h3>
+      <p data-i18n="supplement2_text">
+        Für mehr Fokus, Energie und Motivation vor intensiven Einheiten.
+      </p>
+      <a href="https://www.esn.com/" target="_blank" class="btn" data-i18n="supplements_btn">
+        Supplements ansehen
+      </a>
+    </div>
+
+    <div class="supplement-karte">
+      <div class="supplement-icon">💊</div>
+      <h3 data-i18n="supplement3_titel">Basics</h3>
+      <p data-i18n="supplement3_text">
+        Sinnvolle Grundlagen wie Kreatin, Omega-3 oder Vitamine.
+      </p>
+      <a href="https://www.esn.com/" target="_blank" class="btn" data-i18n="supplements_btn">
+        Supplements ansehen
+      </a>
     </div>
 
   </div>

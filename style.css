@@ -1541,3 +1541,133 @@ img {
     gap: 0;
   }
 }
+
+/* ===== SUPPLEMENTS ===== */
+#supplements {
+  text-align: center;
+  background: linear-gradient(135deg, #f7fbf8, #ffffff);
+}
+
+.supplements-text {
+  margin: 0 auto;
+  color: #555555;
+}
+
+.supplement-code-box {
+  margin: 32px auto 10px auto;
+  max-width: 420px;
+  background-color: #e8f5ec;
+  border: 2px dashed #2e7d32;
+  border-radius: 18px;
+  padding: 20px 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.supplement-code-box span {
+  font-size: 17px;
+  font-weight: 700;
+  color: #222222;
+}
+
+.supplement-code-box strong {
+  font-size: 24px;
+  color: #2e7d32;
+  letter-spacing: 1px;
+}
+
+.supplements-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 45px auto 0 auto;
+}
+
+.supplement-karte {
+  flex: 1;
+  background-color: #ffffff;
+  border: 2px solid #e8f5e9;
+  border-radius: 18px;
+  padding: 38px 28px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.supplement-karte:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(46, 125, 50, 0.16);
+}
+
+.supplement-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 22px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #e8f5ec;
+  border-radius: 50%;
+  font-size: 38px;
+  box-shadow: 0 8px 22px rgba(46, 125, 50, 0.12);
+}
+
+.supplement-karte h3 {
+  font-size: 24px;
+  color: #222222;
+  margin-bottom: 14px;
+}
+
+.supplement-karte p {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0 auto 28px auto;
+  min-height: 78px;
+}
+
+.supplement-karte .btn {
+  display: inline-block;
+  padding: 13px 22px;
+  font-size: 15px;
+}
+
+/* Mobile */
+@media (max-width: 850px) {
+  .supplements-container {
+    flex-direction: column;
+  }
+
+  .supplement-karte {
+    width: 100%;
+  }
+
+  .supplement-code-box {
+    max-width: 100%;
+  }
+}
+
+/* Kontrastmodus */
+body.kontrast #supplements {
+  background: #000000 !important;
+}
+
+body.kontrast .supplement-code-box,
+body.kontrast .supplement-karte {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+body.kontrast .supplement-code-box span,
+body.kontrast .supplement-code-box strong,
+body.kontrast .supplement-karte h3,
+body.kontrast .supplement-karte p {
+  color: #ffffff !important;
+}
