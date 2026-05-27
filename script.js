@@ -389,7 +389,10 @@ window.addEventListener('scroll', function() {
 });
 
 // ===== FORMULAR VALIDIERUNG =====
-formular.addEventListener('submit', function(e) {
+document.addEventListener('DOMContentLoaded', function() {
+  const formular = document.querySelector('.kontakt-form');
+  if (formular) {
+    formular.addEventListener('submit', function(e) {
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const nachricht = document.getElementById('nachricht').value.trim();
@@ -408,6 +411,8 @@ formular.addEventListener('submit', function(e) {
 
       zeigeErfolg('Danke ' + name + '! Ich melde mich innerhalb von 24 Stunden. 💪');
     });
+  }
+});
 
 function zeigeFehler(text) {
   const meldung = document.getElementById('form-meldung');
@@ -561,3 +566,55 @@ function gespeicherteBarrierefreiheitLaden() {
 }
 
 document.addEventListener('DOMContentLoaded', gespeicherteBarrierefreiheitLaden);
+
+// ===== VORHER/NACHHER SLIDER =====
+document.querySelectorAll('.slider-container').forEach(function(container) {
+  const range = container.querySelector('.slider-range');
+  const vorher = container.querySelector('.vorher-bild');
+  const linie = container.querySelector('.slider-linie');
+  const griff = container.querySelector('.slider-griff');
+
+  let isDragging = false;
+
+  function updateSlider(wert) {
+    const pos = wert + '%';
+    vorher.style.width = pos;
+    linie.style.left = pos;
+    griff.style.left = pos;
+    range.value = wert;
+  }
+
+  function getWert(clientX) {
+    const rect = container.getBoundingClientRect();
+    const wert = Math.round(((clientX - rect.left) / rect.width) * 100);
+    return Math.min(100, Math.max(0, wert));
+  }
+
+  // Maus
+  container.addEventListener('mousedown', function() { isDragging = true; });
+  window.addEventListener('mouseup', function() { isDragging = false; });
+  container.addEventListener('mousemove', function(e) {
+    if (!isDragging) return;
+    updateSlider(getWert(e.clientX));
+  });
+  container.addEventListener('click', function(e) {
+    updateSlider(getWert(e.clientX));
+  });
+
+  // Touch / Trackpad
+  container.addEventListener('touchstart', function(e) {
+    isDragging = true;
+    updateSlider(getWert(e.touches[0].clientX));
+  });
+  container.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+    if (!isDragging) return;
+    updateSlider(getWert(e.touches[0].clientX));
+  }, { passive: false });
+  container.addEventListener('touchend', function() { isDragging = false; });
+
+  // Range als Fallback
+  range.addEventListener('input', function() {
+    updateSlider(parseInt(this.value));
+  });
+});
