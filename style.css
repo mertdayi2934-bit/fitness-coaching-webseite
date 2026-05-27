@@ -1828,3 +1828,103 @@ body.kontrast .supplement-karte p {
     text-align: center;
   }
 }
+
+/* ===== STARKER MOBILE FIX VORHER-NACHHER SLIDER ===== */
+@media (max-width: 850px) {
+
+  .ergebnisse-container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ergebnis-karte {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .slider-container {
+    width: 100%;
+    height: 360px;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background-color: #111111;
+  }
+
+  .slider-container .nachher-bild {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  .slider-container .vorher-bild {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  .slider-container .slider-range {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 5;
+  }
+
+  .slider-container .slider-linie {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 3;
+  }
+
+  .slider-container .slider-griff {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+  }
+
+  .slider-label {
+    position: absolute;
+    top: 16px;
+    z-index: 4;
+  }
+
+  .slider-label.links {
+    left: 16px;
+  }
+
+  .slider-label.rechts {
+    right: 16px;
+  }
+
+  .ergebnis-info {
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 18px auto 0 auto;
+    text-align: center;
+    max-width: 95%;
+  }
+}
