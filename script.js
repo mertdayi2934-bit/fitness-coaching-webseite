@@ -645,10 +645,12 @@ document.querySelectorAll('.slider-container').forEach(function(container) {
   }
 
   function getWert(clientX) {
-    const rect = container.getBoundingClientRect();
-    const wert = Math.round(((clientX - rect.left) / rect.width) * 100);
-    return Math.min(100, Math.max(0, wert));
-  }
+  const rect = container.getBoundingClientRect();
+  const wert = Math.round(((clientX - rect.left) / rect.width) * 100);
+  return Math.min(100, Math.max(0, wert));
+}
+
+updateSlider(50);
 
   // Maus
   container.addEventListener('mousedown', function() { isDragging = true; });
