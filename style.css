@@ -1787,3 +1787,44 @@ body.kontrast .supplement-karte p {
     font-size: 23px;
   }
 }
+
+/* ===== MOBILE FIX VORHER-NACHHER SLIDER ===== */
+@media (max-width: 850px) {
+
+  .ergebnisse-container {
+    gap: 42px;
+  }
+
+  .ergebnis-karte {
+    width: 100%;
+  }
+
+  .slider-container {
+    width: 100%;
+    height: 430px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider-container img,
+  .nachher-bild {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .vorher-bild {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .ergebnis-info {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-top: 18px;
+    text-align: center;
+  }
+}
