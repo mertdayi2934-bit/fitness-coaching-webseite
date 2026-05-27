@@ -23,6 +23,15 @@ const uebersetzungen = {
     nav_bewertungen: "Bewertungen",
     nav_faq:         "FAQ",
     nav_kontakt:     "Kontakt",
+    nav_gratis: "Gratis Pläne",
+    gratis_titel: "Gratis Pläne herunterladen",
+    gratis_text: "Starte direkt mit deinem kostenlosen Trainings- oder Ernährungsplan. Wähle einfach den passenden Plan und deine Sprache aus.",
+    gratis_fitnessstudio_titel: "Trainingsplan Fitnessstudio",
+    gratis_fitnessstudio_text: "3 Tage pro Woche, ideal für Einsteiger im Gym.",
+    gratis_zuhause_titel: "Trainingsplan Zuhause",
+    gratis_zuhause_text: "Effektives Training ohne Geräte – perfekt für zu Hause.",
+    gratis_ernaehrung_titel: "Ernährungsplan",
+    gratis_ernaehrung_text: "Ein einfacher Leitfaden für gesunde Ernährung und bessere Ergebnisse.",
     ueber_fakt1:       "✅ Zertifizierter Personal Trainer",
     ueber_fakt2:       "✅ Über 100 erfolgreiche Kunden",
     ueber_fakt3:       "✅ Spezialist für Muskelaufbau & Fettabbau",
@@ -113,6 +122,15 @@ const uebersetzungen = {
     nav_bewertungen: "Reviews",
     nav_faq:         "FAQ",
     nav_kontakt:     "Contact",
+    nav_gratis: "Free Plans",
+    gratis_titel: "Download Free Plans",
+    gratis_text: "Start directly with your free training or nutrition plan. Choose the right plan and your language.",
+    gratis_fitnessstudio_titel: "Gym Training Plan",
+    gratis_fitnessstudio_text: "3 days per week, ideal for beginners at the gym.",
+    gratis_zuhause_titel: "Home Training Plan",
+    gratis_zuhause_text: "Effective training without equipment – perfect for home.",
+    gratis_ernaehrung_titel: "Nutrition Plan",
+    gratis_ernaehrung_text: "A simple guide for healthy nutrition and better results.",
     ueber_fakt1: "✅ Certified Personal Trainer",
     ueber_fakt2: "✅ Over 100 successful clients",
     ueber_fakt3: "✅ Specialist in muscle gain & fat loss",
@@ -203,6 +221,15 @@ const uebersetzungen = {
     nav_bewertungen: "Отзывы",
     nav_faq:         "Вопросы",
     nav_kontakt:     "Контакт",
+    nav_gratis: "Бесплатные планы",
+    gratis_titel: "Скачать бесплатные планы",
+    gratis_text: "Начни с бесплатного плана тренировок или питания. Выбери подходящий план и язык.",
+    gratis_fitnessstudio_titel: "План тренировок в зале",
+    gratis_fitnessstudio_text: "3 дня в неделю, идеально для новичков в фитнес-зале.",
+    gratis_zuhause_titel: "План тренировок дома",
+    gratis_zuhause_text: "Эффективные тренировки без оборудования – идеально для дома.",
+    gratis_ernaehrung_titel: "План питания",
+    gratis_ernaehrung_text: "Простой гид по здоровому питанию и лучшим результатам.",
     ueber_fakt1: "✅ Сертифицированный персональный тренер",
     ueber_fakt2: "✅ Более 100 успешных клиентов",
     ueber_fakt3: "✅ Специалист по набору мышц и похудению",
@@ -616,5 +643,29 @@ document.querySelectorAll('.slider-container').forEach(function(container) {
   // Range als Fallback
   range.addEventListener('input', function() {
     updateSlider(parseInt(this.value));
+  });
+});
+
+// ===== HAMBURGER MENÜ MOBILE =====
+function toggleMobileMenu() {
+  const navMenu = document.getElementById('nav-menu');
+  const hamburger = document.querySelector('.hamburger');
+
+  navMenu.classList.toggle('offen');
+
+  const istOffen = navMenu.classList.contains('offen');
+  hamburger.setAttribute('aria-expanded', istOffen);
+}
+
+// Menü nach Klick auf Link wieder schließen
+document.querySelectorAll('.nav-links a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    const navMenu = document.getElementById('nav-menu');
+    const hamburger = document.querySelector('.hamburger');
+
+    if (window.innerWidth <= 850 && navMenu.classList.contains('offen')) {
+      navMenu.classList.remove('offen');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
   });
 });

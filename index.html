@@ -25,17 +25,42 @@
 <!-- NAVIGATION -->
 <nav class="navbar" aria-label="Hauptnavigation">
 
- <div class="logo">FitCoach</div>
+  <div class="nav-top">
+    <div class="logo">FitCoach</div>
 
-  <div class="nav-links">
-    <a href="#ueber-mich" data-i18n="nav_ueber">Über mich</a>
-    <a href="#methodik" data-i18n="nav_methodik">Methodik</a>
-    <a href="#preise" data-i18n="nav_preise">Preise</a>
-    <a href="#ergebnisse" data-i18n="nav_ergebnisse">Ergebnisse</a>
-    <a href="#bewertungen" data-i18n="nav_bewertungen">Bewertungen</a>
-    <a href="#faq" data-i18n="nav_faq">FAQ</a>
-    <a href="#kontakt" class="kontakt-button" data-i18n="nav_kontakt">Kontakt</a>
+    <button 
+      class="hamburger" 
+      type="button" 
+      onclick="toggleMobileMenu()" 
+      aria-label="Menü öffnen oder schließen"
+      aria-expanded="false">
+      ☰
+    </button>
   </div>
+
+  <div class="nav-menu" id="nav-menu">
+
+    <div class="nav-links">
+      <a href="#ueber-mich" data-i18n="nav_ueber">Über mich</a>
+      <a href="#methodik" data-i18n="nav_methodik">Methodik</a>
+      <a href="#preise" data-i18n="nav_preise">Preise</a>
+      <a href="#gratis-plaene" data-i18n="nav_gratis">Gratis Pläne</a>
+      <a href="#ergebnisse" data-i18n="nav_ergebnisse">Ergebnisse</a>
+      <a href="#bewertungen" data-i18n="nav_bewertungen">Bewertungen</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      <a href="#kontakt" class="kontakt-button" data-i18n="nav_kontakt">Kontakt</a>
+    </div>
+
+    <!-- Sprachwechsler -->
+    <div class="sprache" aria-label="Sprachauswahl">
+      <button type="button" onclick="spracheWechseln('de')" aria-label="Deutsch auswählen">🇩🇪</button>
+      <button type="button" onclick="spracheWechseln('en')" aria-label="Englisch auswählen">🇬🇧</button>
+      <button type="button" onclick="spracheWechseln('ru')" aria-label="Russisch auswählen">🇷🇺</button>
+    </div>
+
+  </div>
+
+</nav>
 
   <!-- Sprachwechsler -->
   <div class="sprach
@@ -62,7 +87,7 @@
 
     <!-- Foto links -->
     <div class="ueber-foto">
-      <img src="images/coach.jpg.PNG" alt="Foto des Personal Trainers" />
+      <img src="images/coach2.jpg.PNG" alt="Foto des Personal Trainers" />
     </div>
 
     <!-- Text rechts -->
@@ -166,6 +191,129 @@
         <li data-i18n="paket3_l5">✅ Video Analyse</li>
       </ul>
       <a href="#kontakt" class="btn" data-i18n="paket_btn">Jetzt buchen</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- GRATIS PLÄNE -->
+<section id="gratis-plaene">
+  <h2 data-i18n="gratis_titel">Gratis Pläne herunterladen</h2>
+  <p class="gratis-text" data-i18n="gratis_text">
+    Starte direkt mit deinem kostenlosen Trainings- oder Ernährungsplan. Wähle einfach den passenden Plan und deine Sprache aus.
+  </p>
+
+  <div class="gratis-container">
+
+    <!-- Fitnessstudio Plan -->
+    <div class="gratis-karte">
+      <div class="gratis-icon">
+        <img src="images/gym-icon.png" alt="Symbol für Fitnessstudio Trainingsplan">
+</div>
+      <h3 data-i18n="gratis_fitnessstudio_titel">Trainingsplan Fitnessstudio</h3>
+      <p data-i18n="gratis_fitnessstudio_text">
+        3 Tage pro Woche, ideal für Einsteiger im Gym.
+      </p>
+
+      <div class="pdf-links">
+        <div class="pdf-row">
+          <span>Deutsch</span>
+          <div>
+            <a href="pdfs/FitCoach_Gratis_Trainingsplan_Fitnessstudio_DE.pdf" target="_blank">Ansehen</a>
+            <a href="pdfs/FitCoach_Gratis_Trainingsplan_Fitnessstudio_DE.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <div class="pdf-row">
+          <span>English</span>
+          <div>
+            <a href="pdfs/FitCoach_Gratis_Trainingsplan_Fitnessstudio_EN.pdf" target="_blank">Ansehen</a>
+            <a href="pdfs/FitCoach_Gratis_Trainingsplan_Fitnessstudio_EN.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <div class="pdf-row">
+          <span>Русский</span>
+          <div>
+            <a href="pdfs/FitCoach_Gratis_Trainingsplan_Fitnessstudio_RU.pdf" target="_blank">Ansehen</a>
+            <a href="pdfs/FitCoach_Gratis_Trainingsplan_Fitnessstudio_RU.pdf" download>Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zuhause Plan -->
+    <div class="gratis-karte">
+      <div class="gratis-icon">
+        <img src="images/home-icon.png" alt="Symbol für Zuhause Trainingsplan">
+</div>
+      <h3 data-i18n="gratis_zuhause_titel">Trainingsplan Zuhause</h3>
+      <p data-i18n="gratis_zuhause_text">
+        Effektives Training ohne Geräte – perfekt für zu Hause.
+      </p>
+
+      <div class="pdf-links">
+        <div class="pdf-row">
+          <span>Deutsch</span>
+          <div>
+            <a href="pdfs/FitCoach_Gratis_Trainingsplan_Zuhause_DE.pdf" target="_blank">Ansehen</a>
+            <a href="pdfs/FitCoach_Gratis_Trainingsplan_Zuhause_DE.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <div class="pdf-row">
+          <span>English</span>
+          <div>
+            <a href="pdfs/FitCoach_Gratis_Trainingsplan_Zuhause_EN.pdf" target="_blank">Ansehen</a>
+            <a href="pdfs/FitCoach_Gratis_Trainingsplan_Zuhause_EN.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <div class="pdf-row">
+          <span>Русский</span>
+          <div>
+            <a href="pdfs/FitCoach_Gratis_Trainingsplan_Zuhause_RU.pdf" target="_blank">Ansehen</a>
+            <a href="pdfs/FitCoach_Gratis_Trainingsplan_Zuhause_RU.pdf" download>Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ernährungsplan -->
+    <div class="gratis-karte">
+      <div class="gratis-icon">
+        <img src="images/nutrition-icon.png" alt="Symbol für Ernährungsplan">
+</div>  
+      <h3 data-i18n="gratis_ernaehrung_titel">Ernährungsplan</h3>
+      <p data-i18n="gratis_ernaehrung_text">
+        Ein einfacher Leitfaden für gesunde Ernährung und bessere Ergebnisse.
+      </p>
+
+      <div class="pdf-links">
+        <div class="pdf-row">
+          <span>Deutsch</span>
+          <div>
+            <a href="pdfs/FitCoach_Gratis_Ernaehrungsplan_DE.pdf" target="_blank">Ansehen</a>
+            <a href="pdfs/FitCoach_Gratis_Ernaehrungsplan_DE.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <div class="pdf-row">
+          <span>English</span>
+          <div>
+            <a href="pdfs/FitCoach_Gratis_Ernaehrungsplan_EN.pdf" target="_blank">Ansehen</a>
+            <a href="pdfs/FitCoach_Gratis_Ernaehrungsplan_EN.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <div class="pdf-row">
+          <span>Русский</span>
+          <div>
+            <a href="pdfs/FitCoach_Gratis_Ernaehrungsplan_RU.pdf" target="_blank">Ansehen</a>
+            <a href="pdfs/FitCoach_Gratis_Ernaehrungsplan_RU.pdf" download>Download</a>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>

@@ -1124,3 +1124,293 @@ body.kontrast .whatsapp-float {
 
 .slider-label.links { left: 12px; }
 .slider-label.rechts { right: 12px; }
+
+/* ===== GRATIS PLÄNE ===== */
+#gratis-plaene {
+  text-align: center;
+}
+
+.gratis-text {
+  margin: 0 auto;
+  color: #555555;
+}
+
+.gratis-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 45px auto 0 auto;
+}
+
+.gratis-karte {
+  flex: 1;
+  background-color: #ffffff;
+  border: 2px solid #e8f5e9;
+  border-radius: 18px;
+  padding: 38px 28px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gratis-karte:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(46, 125, 50, 0.16);
+}
+
+.gratis-icon {
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.gratis-karte h3 {
+  font-size: 23px;
+  color: #222222;
+  margin-bottom: 14px;
+}
+
+.gratis-karte p {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0 auto 26px auto;
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.download-buttons a {
+  background-color: #2e7d32;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 11px 15px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+  transition: all 0.25s ease;
+}
+
+.download-buttons a:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+}
+
+/* Mobile Ansicht für Gratis Pläne */
+@media (max-width: 850px) {
+  .gratis-container {
+    flex-direction: column;
+  }
+}
+
+/* ===== PDF ANSEHEN / DOWNLOAD BUTTONS ===== */
+.pdf-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.pdf-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background-color: #f7f9f7;
+  border: 1px solid #e8f5e9;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.pdf-row span {
+  font-size: 15px;
+  font-weight: 800;
+  color: #222222;
+  white-space: nowrap;
+}
+
+.pdf-row div {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.pdf-row a {
+  background-color: #2e7d32;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: all 0.25s ease;
+}
+
+.pdf-row a:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+}
+
+.pdf-row a[download] {
+  background-color: #ffffff;
+  color: #2e7d32;
+  border: 2px solid #2e7d32;
+}
+
+.pdf-row a[download]:hover {
+  background-color: #e8f5ec;
+}
+
+body.kontrast .pdf-row {
+  background-color: #111111 !important;
+  border-color: #ffffff !important;
+}
+
+body.kontrast .pdf-row span {
+  color: #ffffff !important;
+}
+
+body.kontrast .pdf-row a {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
+@media (max-width: 500px) {
+  .pdf-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pdf-row div {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* ===== GRATIS PLÄNE ICON-BILDER ===== */
+.gratis-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 22px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #e8f5ec;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.gratis-icon img {
+  width: 62px !important;
+  height: 62px !important;
+  max-width: 62px !important;
+  max-height: 62px !important;
+  object-fit: contain;
+  display: block;
+}
+
+.gratis-karte h3 {
+  min-height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gratis-karte p {
+  min-height: 58px;
+}
+
+.gratis-icon {
+  box-shadow: 0 8px 22px rgba(46, 125, 50, 0.12);
+}
+
+/* ===== HAMBURGER MENÜ MOBILE ===== */
+.nav-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.hamburger {
+  display: none;
+  border: none;
+  background-color: #2e7d32;
+  color: #ffffff;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  font-size: 26px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.hamburger:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 851px) {
+  .nav-menu {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 850px) {
+  nav {
+    align-items: stretch;
+    padding: 14px 20px;
+    gap: 14px;
+  }
+
+  .nav-top {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 12px;
+  }
+
+  .nav-menu.offen {
+    display: flex;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 13px 16px;
+  }
+
+  .sprache {
+    justify-content: center;
+    align-self: center;
+  }
+}
