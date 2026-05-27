@@ -2239,3 +2239,98 @@ body.kontrast .fuerwen-karte h3,
 body.kontrast .fuerwen-karte p {
   color: #ffffff !important;
 }
+
+/* ===== WAS DU IM COACHING BEKOMMST ===== */
+#leistungen {
+  background-color: #f7f9f7;
+  text-align: center;
+}
+
+.leistungen-text {
+  margin: 0 auto;
+  color: #555555;
+}
+
+.leistungen-container {
+  max-width: 1100px;
+  margin: 45px auto 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.leistung-item {
+  background-color: #ffffff;
+  border: 2px solid #e8f5e9;
+  border-radius: 18px;
+  padding: 26px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  text-align: left;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leistung-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 34px rgba(46, 125, 50, 0.16);
+}
+
+.leistung-item span {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #e8f5ec;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.leistung-item h3 {
+  font-size: 20px;
+  color: #222222;
+  margin-bottom: 8px;
+}
+
+.leistung-item p {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 850px) {
+  .leistungen-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .leistung-item {
+    padding: 24px;
+  }
+}
+
+/* Kontrastmodus */
+body.kontrast #leistungen {
+  background-color: #000000 !important;
+}
+
+body.kontrast .leistung-item {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+body.kontrast .leistung-item h3,
+body.kontrast .leistung-item p {
+  color: #ffffff !important;
+}
