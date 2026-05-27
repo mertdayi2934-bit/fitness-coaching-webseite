@@ -110,6 +110,16 @@ const uebersetzungen = {
     supplement2_text: "Für mehr Fokus, Energie und Motivation vor intensiven Einheiten.",
     supplement3_titel: "Basics",
     supplement3_text: "Sinnvolle Grundlagen wie Kreatin, Omega-3 oder Vitamine.",
+    fuerwen_titel: "Für wen ist das Coaching geeignet?",
+    fuerwen_text: "Mein Coaching ist ideal für Menschen, die nicht länger planlos trainieren möchten, sondern klare Struktur, Motivation und echte Fortschritte suchen.",
+    fuerwen1_titel: "Du willst abnehmen",
+    fuerwen1_text: "Du möchtest Körperfett reduzieren, dich wohler fühlen und endlich einen Plan haben, der zu deinem Alltag passt.",
+    fuerwen2_titel: "Du willst Muskeln aufbauen",
+    fuerwen2_text: "Du willst stärker werden, sichtbare Fortschritte machen und dein Training sinnvoll strukturieren.",
+    fuerwen3_titel: "Du brauchst Ernährungsklarheit",
+    fuerwen3_text: "Du möchtest besser essen, ohne komplizierte Diäten, Verbote oder ständiges Rätselraten.",
+    fuerwen4_titel: "Du brauchst Motivation",
+    fuerwen4_text: "Du willst jemanden an deiner Seite, der dich unterstützt, kontrolliert und langfristig dranbleiben lässt.",
 },
 
   en: {
@@ -220,6 +230,16 @@ const uebersetzungen = {
     supplement2_text: "For more focus, energy and motivation before intense sessions.",
     supplement3_titel: "Basics",
     supplement3_text: "Useful essentials such as creatine, omega-3 or vitamins.",
+    fuerwen_titel: "Who is this coaching for?",
+    fuerwen_text: "My coaching is ideal for people who no longer want to train without a plan, but want clear structure, motivation and real progress.",
+    fuerwen1_titel: "You want to lose weight",
+    fuerwen1_text: "You want to reduce body fat, feel better and finally have a plan that fits your everyday life.",
+    fuerwen2_titel: "You want to build muscle",
+    fuerwen2_text: "You want to get stronger, make visible progress and structure your training properly.",
+    fuerwen3_titel: "You need nutrition clarity",
+    fuerwen3_text: "You want to eat better without complicated diets, strict bans or constant guessing.",
+    fuerwen4_titel: "You need motivation",
+    fuerwen4_text: "You want someone by your side who supports you, keeps you accountable and helps you stay consistent.",
 },
 
   ru: {
@@ -330,6 +350,16 @@ const uebersetzungen = {
     supplement2_text: "Для большего фокуса, энергии и мотивации перед интенсивными тренировками.",
     supplement3_titel: "База",
     supplement3_text: "Полезные основы, такие как креатин, омега-3 или витамины.",
+    fuerwen_titel: "Для кого подходит коучинг?",
+    fuerwen_text: "Мой коучинг идеально подходит тем, кто больше не хочет тренироваться без плана, а хочет структуру, мотивацию и реальные результаты.",
+    fuerwen1_titel: "Ты хочешь похудеть",
+    fuerwen1_text: "Ты хочешь уменьшить процент жира, чувствовать себя лучше и наконец получить план, который подходит твоему образу жизни.",
+    fuerwen2_titel: "Ты хочешь набрать мышцы",
+    fuerwen2_text: "Ты хочешь стать сильнее, видеть прогресс и тренироваться по понятной структуре.",
+    fuerwen3_titel: "Тебе нужна ясность в питании",
+    fuerwen3_text: "Ты хочешь питаться лучше без сложных диет, запретов и постоянных догадок.",
+    fuerwen4_titel: "Тебе нужна мотивация",
+    fuerwen4_text: "Ты хочешь, чтобы рядом был человек, который поддерживает тебя, контролирует прогресс и помогает не сдаваться.",
 }
 
 };
