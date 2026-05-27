@@ -4,16 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fitness Coaching</title>
+  <title>FitCoach Mert Güngör – Personal Trainer Augsburg</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Personal Trainer in Augsburg – Online & Vor-Ort Coaching für Muskelaufbau, Fettabbau und Ernährung. Jetzt kostenloses Erstgespräch sichern!">
+  <meta name="keywords" content="Personal Trainer Augsburg, Fitness Coaching, Abnehmen, Muskelaufbau, Online Coaching">
+  <meta name="author" content="Mert Güngör">
+
+  <!-- Social Media Vorschau -->
+  <meta property="og:title" content="FitCoach Mert Güngör – Personal Trainer Augsburg">
+  <meta property="og:description" content="Individuelles Personal Coaching – online & vor Ort. Echte Ergebnisse, nachhaltig erreicht.">
+  <meta property="og:image" content="images/coach.jpg.PNG">
+  <meta property="og:type" content="website">
 
   <!-- Verbindung zur CSS Datei -->
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-
-<body>
 
 <!-- NAVIGATION -->
 <nav class="navbar" aria-label="Hauptnavigation">
+
+ <div class="logo">FitCoach</div>
 
   <div class="nav-links">
     <a href="#ueber-mich" data-i18n="nav_ueber">Über mich</a>
@@ -26,7 +38,8 @@
   </div>
 
   <!-- Sprachwechsler -->
-  <div class="sprache" aria-label="Sprachauswahl">
+  <div class="sprach
+  e" aria-label="Sprachauswahl">
     <button type="button" onclick="spracheWechseln('de')" aria-label="Deutsch auswählen">🇩🇪</button>
     <button type="button" onclick="spracheWechseln('en')" aria-label="Englisch auswählen">🇬🇧</button>
     <button type="button" onclick="spracheWechseln('ru')" aria-label="Russisch auswählen">🇷🇺</button>
@@ -45,7 +58,7 @@
 
   <!-- ÜBER MICH -->
 <section id="ueber-mich">
-  <div class="ueber-container">
+  <div class="ueber-container"> 
 
     <!-- Foto links -->
     <div class="ueber-foto">
@@ -59,7 +72,7 @@
 
       <ul class="ueber-fakten">
         <li data-i18n="ueber_fakt1">✅ Zertifizierter Personal Trainer</li>
-        <li data-i18n="ueber_fakt2">✅ Über 100 erfolgreiche Kunden</li>
+        <li>✅ <span data-ziel="100">0</span> erfolgreiche Kunden</li>
         <li data-i18n="ueber_fakt3">✅ Spezialist für Muskelaufbau & Fettabbau</li>
         <li data-i18n="ueber_fakt4">✅ Online & Vor-Ort Coaching</li>
       </ul>
@@ -167,19 +180,19 @@
 
     <!-- Kunde 1 -->
     <div class="ergebnis-karte">
-      <img src="images/Client_1.jpg" alt="Vorher Nachher Kunde 1" />
+      <img src="images/Client_1.jpg" alt="Vorher Nachher Kunde 1" loading="lazy" />
       <p class="ergebnis-info" data-i18n="ergebnis1">Max, 34 Jahre – 12 kg abgenommen in 3 Monaten</p>
     </div>
 
     <!-- Kunde 2 -->
     <div class="ergebnis-karte">
-      <img src="images/Client_2.jpg" alt="Vorher Nachher Kunde 2" />
+      <img src="images/Client_2.jpg" alt="Vorher Nachher Kunde 2" loading="lazy" />
       <p class="ergebnis-info" data-i18n="ergebnis2">Lisa, 28 Jahre – 8 kg abgenommen in 2 Monaten</p>
     </div>
 
     <!-- Kunde 3 -->
     <div class="ergebnis-karte">
-      <img src="images/Client_3.jpg" alt="Vorher Nachher Kunde 3" />
+      <img src="images/Client_3.jpg" alt="Vorher Nachher Kunde 3" loading="lazy" />
       <p class="ergebnis-info" data-i18n="ergebnis3">Tom, 41 Jahre – 15 kg abgenommen in 4 Monaten</p>
     </div>
 
@@ -230,7 +243,7 @@
 
     <!-- Frage 1 -->
     <div class="faq-item">
-      <button class="faq-frage" onclick="faqToggle(this)">
+      <button class="faq-frage" onclick="faqToggle(this)" aria-expanded="false">
         <span data-i18n="faq1_frage">Für wen ist das Coaching geeignet?</span>
         <span class="faq-icon">+</span>
       </button>
@@ -241,7 +254,7 @@
 
     <!-- Frage 2 -->
     <div class="faq-item">
-      <button class="faq-frage" onclick="faqToggle(this)">
+      <button class="faq-frage" onclick="faqToggle(this)" aria-expanded="false">
         <span data-i18n="faq2_frage">Wie läuft das Online Coaching ab?</span>
         <span class="faq-icon">+</span>
       </button>
@@ -252,7 +265,7 @@
 
     <!-- Frage 3 -->
     <div class="faq-item">
-      <button class="faq-frage" onclick="faqToggle(this)">
+      <button class="faq-frage" onclick="faqToggle(this)" aria-expanded="false">
         <span data-i18n="faq3_frage">Wie schnell sehe ich Ergebnisse?</span>
         <span class="faq-icon">+</span>
       </button>
@@ -263,7 +276,7 @@
 
     <!-- Frage 4 -->
     <div class="faq-item">
-      <button class="faq-frage" onclick="faqToggle(this)">
+      <button class="faq-frage" onclick="faqToggle(this)" aria-expanded="false">
         <span data-i18n="faq4_frage">Kann ich das Paket jederzeit kündigen?</span>
         <span class="faq-icon">+</span>
       </button>
@@ -275,29 +288,25 @@
   </div>
 </section>
 
-  <section id="kontakt" class="kontakt-section">
+<!-- KONTAKT -->
+<section id="kontakt" class="kontakt-section">
   <div class="kontakt-container">
-
     <div class="kontakt-info">
-      <h2>Kontakt</h2>
-      <p class="kontakt-text">
-        Schreib mir – ich melde mich innerhalb von 24 Stunden bei dir!
-      </p>
-
+      <h2 data-i18n="kontakt_titel">Kontakt</h2>
+      <p class="kontakt-text" data-i18n="kontakt_text">Schreib mir – ich melde mich innerhalb von 24 Stunden!</p>
       <div class="info-box">
         <p>👤 <strong>Mert Güngör</strong></p>
-        <p>📍 Augsburg, Deutschland</p>
+        <p>📍 <span data-i18n="kontakt_ort">Augsburg, Deutschland</span></p>
         <p>📱 +49 123 456 789</p>
         <p>✉️ info@fitcoach.de</p>
-        <p>🕒 Mo–Fr, 08:00–20:00 Uhr</p>
-        <p>📸 <strong>@mertdayi</strong></p>
+        <p>🕒 <span data-i18n="kontakt_zeit">Mo–Fr, 08:00–20:00 Uhr</span></p>
+        <p>📸 <a href="https://instagram.com/mertdayi" target="_blank">@mertdayi</a></p>
       </div>
     </div>
-
-    <form class="kontakt-form">
+    <form class="kontakt-form" action="https://formspree.io/f/xgoqpbzn" method="POST">
       <div class="form-row">
         <div class="form-group">
-          <label for="anrede">Anrede</label>
+          <label for="anrede" data-i18n="kontakt_anrede">Anrede</label>
           <select id="anrede" name="anrede">
             <option value="">Bitte auswählen</option>
             <option value="herr">Herr</option>
@@ -305,47 +314,99 @@
             <option value="divers">Divers</option>
           </select>
         </div>
-
         <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Max Mustermann">
+          <label for="name" data-i18n="kontakt_name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Max Mustermann" />
         </div>
       </div>
-
       <div class="form-group">
-        <label for="email">E-Mail</label>
-        <input type="email" id="email" name="email" placeholder="max@beispiel.de">
+        <label for="email" data-i18n="kontakt_email">E-Mail</label>
+        <input type="email" id="email" name="email" placeholder="max@beispiel.de" />
       </div>
-
       <div class="form-group">
-        <label for="ziel">Dein Ziel</label>
+        <label for="ziel" data-i18n="kontakt_ziel">Dein Ziel</label>
         <select id="ziel" name="ziel">
           <option value="">Bitte auswählen</option>
-          <option value="abnehmen">Abnehmen</option>
-          <option value="muskelaufbau">Muskelaufbau</option>
-          <option value="fitness">Allgemeine Fitness</option>
-          <option value="ernaehrung">Ernährungsberatung</option>
+          <option value="abnehmen" data-i18n="ziel_abnehmen">Abnehmen</option>
+          <option value="muskelaufbau" data-i18n="ziel_muskel">Muskelaufbau</option>
+          <option value="fitness" data-i18n="ziel_fitness">Allgemeine Fitness</option>
+          <option value="ernaehrung" data-i18n="ziel_ernaehrung">Ernährungsberatung</option>
         </select>
       </div>
-
       <div class="form-group">
-        <label for="nachricht">Nachricht</label>
-        <textarea id="nachricht" name="nachricht" placeholder="Schreib mir kurz, wobei ich dir helfen kann..."></textarea>
+        <label for="nachricht" data-i18n="kontakt_nachricht">Nachricht</label>
+        <textarea id="nachricht" name="nachricht" placeholder="Schreib mir kurz..."></textarea>
       </div>
-
-      <button type="submit">Nachricht senden</button>
+      <div id="form-meldung" style="display:none;"></div>
+      <button type="submit" class="btn" data-i18n="kontakt_btn">Nachricht senden</button>
     </form>
-
   </div>
 </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p data-i18n="footer_text">© 2026 FitCoach – Alle Rechte vorbehalten</p>
-  </footer>
+<!-- IMPRESSUM -->
+<section id="impressum">
+  <h2>Impressum</h2>
+  <div class="impressum-container">
+    <div class="impressum-block">
+      <h3>Angaben gemäß § 5 TMG</h3>
+      <p>Mert Güngör<br>
+      Augsburg, Deutschland<br>
+      E-Mail: info@fitcoach.de</p>
+    </div>
+    <div class="impressum-block">
+      <h3>Haftungsausschluss</h3>
+      <p>Die Inhalte dieser Webseite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität wird keine Gewähr übernommen.</p>
+    </div>
+    <div class="impressum-block">
+      <h3>Datenschutz</h3>
+      <p>Die Nutzung dieser Webseite ist ohne Angabe personenbezogener Daten möglich. Soweit Daten erhoben werden, erfolgt dies freiwillig.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Verbindung zur JavaScript Datei -->
-  <script src="script.js"></script>
+<!-- FOOTER -->
+<footer>
+  <p data-i18n="footer_text">© 2026 FitCoach – Alle Rechte vorbehalten</p>
+
+  <div class="footer-socials" aria-label="Social Media Links">
+  <a href="https://instagram.com/mertdayi" target="_blank" aria-label="Instagram öffnen">Instagram</a>
+  <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok öffnen">TikTok</a>
+  <a href="https://www.youtube.com/watch?v=XTgmd3JYyHA" target="_blank" aria-label="YouTube Video öffnen">YouTube</a>
+</div>
+</footer>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a 
+  href="https://wa.me/49123456789?text=Hallo%20Mert%2C%20ich%20interessiere%20mich%20f%C3%BCr%20dein%20Coaching."
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="WhatsApp Chat öffnen">
+  💬
+</a>
+
+<button id="back-to-top" aria-label="Nach oben scrollen">↑</button>
+<script src="script.js"></script>
+
+<!-- BARRIEREFREIHEITS-MENÜ -->
+<div class="accessibility-menu" aria-label="Barrierefreiheitsmenü">
+  <button type="button" onclick="toggleAccessibilityMenu()" aria-label="Barrierefreiheitsmenü öffnen">
+    ♿
+  </button>
+
+  <div class="accessibility-panel" id="accessibility-panel">
+    <p>Barrierefreiheit</p>
+
+    <button type="button" onclick="textVorlesen()">Text vorlesen</button>
+    <button type="button" onclick="vorlesenStoppen()">Vorlesen stoppen</button>
+    <button type="button" onclick="schriftGroesser()">A+</button>
+    <button type="button" onclick="schriftKleiner()">A-</button>
+    <button type="button" onclick="kontrastModus()">Kontrast</button>
+    <button type="button" onclick="barrierefreiheitReset()">Reset</button>
+  </div>
+</div>
+
+</div>
+</div>
 
 </body>
 </html>

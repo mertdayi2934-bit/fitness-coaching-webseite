@@ -221,6 +221,13 @@ footer {
   font-size: 14px;
 }
 /* ===== ÜBER MICH ===== */
+.ueber-foto img {
+  width: 380px;
+  height: 480px;
+  object-fit: cover;        /* Bild füllt den Bereich aus */
+  border-radius: 16px;
+}
+
 .ueber-container {
   display: flex;            /* nebeneinander */
   align-items: center;
@@ -229,12 +236,7 @@ footer {
   margin: 0 auto;           /* zentriert */
 }
 
-.ueber-foto img {
-  width: 380px;
-  height: 480px;
-  object-fit: cover;        /* Bild füllt den Bereich aus */
-  border-radius: 16px;
-}
+
 
 .ueber-text h2 {
   margin-bottom: 20px;
@@ -609,4 +611,427 @@ footer {
   .kontakt-info h2 {
     font-size: 34px;
   }
+}
+/* ===== IMPRESSUM ===== */
+.impressum-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+}
+
+.impressum-block {
+  flex: 1;
+  background-color: #ffffff;
+  border: 2px solid #e8f5e9;
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.impressum-block h3 {
+  font-size: 18px;
+  color: #2e7d32;
+  margin-bottom: 12px;
+}
+
+.impressum-block p {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.7;
+  max-width: 100%;
+}
+/* ===== SCROLL ANIMATION ===== */
+.versteckt {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.sichtbar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== BACK TO TOP ===== */
+#back-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  background-color: #2e7d32;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#back-to-top.sichtbar {
+  opacity: 1;
+}
+
+#back-to-top:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== AKTIVER NAV LINK ===== */
+.nav-links a.aktiv {
+  background-color: #e8f5ec;
+  color: #2e7d32;
+}
+
+/* ===== FORMULAR MELDUNG ===== */
+.form-meldung {
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.form-meldung.erfolg {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 2px solid #2e7d32;
+}
+
+.form-meldung.fehler {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 2px solid #c62828;
+}
+
+/* ===== HOVER EFFEKTE KARTEN ===== */
+.methodik-karte,
+.preis-karte,
+.bewertung-karte {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.methodik-karte:hover,
+.preis-karte:hover,
+.bewertung-karte:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(46,125,50,0.15);
+}
+
+.preis-karte.beliebt:hover {
+  transform: scale(1.05) translateY(-6px);
+}
+
+/* ===== FOOTER SOCIAL MEDIA LINKS ===== */
+.footer-socials {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-socials a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background-color: #ffffff;
+  color: #1b5e20;
+  transform: translateY(-2px);
+}
+
+/* ===== WHATSAPP FLOAT BUTTON ===== */
+.whatsapp-float {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px) scale(1.05);
+  background-color: #1ebe5d;
+}
+
+/* ===== BARRIEREFREIHEITS-MENÜ ===== */
+.accessibility-menu {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  z-index: 1002;
+}
+
+.accessibility-menu > button {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: none;
+  background-color: #2e7d32;
+  color: #ffffff;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.accessibility-menu > button:hover {
+  background-color: #1b5e20;
+  transform: translateY(-4px);
+}
+
+.accessibility-panel {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 70px;
+  width: 220px;
+  background-color: #ffffff;
+  border: 2px solid #e8f5e9;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18);
+}
+
+.accessibility-panel.offen {
+  display: block;
+}
+
+.accessibility-panel p {
+  font-size: 16px;
+  font-weight: 800;
+  color: #2e7d32;
+  margin-bottom: 12px;
+}
+
+.accessibility-panel button {
+  width: 100%;
+  border: none;
+  background-color: #f2f4f2;
+  color: #222222;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.accessibility-panel button:hover {
+  background-color: #e8f5ec;
+  color: #2e7d32;
+}
+
+/* ===== KONTRAST MODUS ===== */
+body.kontrast {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Grundbereiche */
+body.kontrast nav,
+body.kontrast section,
+body.kontrast footer {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* Texte */
+body.kontrast h1,
+body.kontrast h2,
+body.kontrast h3,
+body.kontrast p,
+body.kontrast li,
+body.kontrast a,
+body.kontrast label,
+body.kontrast span,
+body.kontrast strong {
+  color: #ffffff !important;
+}
+
+/* Karten und Boxen */
+body.kontrast .methodik-karte,
+body.kontrast .preis-karte,
+body.kontrast .bewertung-karte,
+body.kontrast .ergebnis-karte,
+body.kontrast .impressum-block,
+body.kontrast .kontakt-form,
+body.kontrast .info-box,
+body.kontrast .faq-item,
+body.kontrast .accessibility-panel {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Buttons */
+body.kontrast .btn,
+body.kontrast .kontakt-form button,
+body.kontrast .nav-links a[href="#kontakt"],
+body.kontrast .accessibility-panel button,
+body.kontrast #back-to-top {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Hover im Kontrast-Modus */
+body.kontrast .btn:hover,
+body.kontrast .kontakt-form button:hover,
+body.kontrast .accessibility-panel button:hover {
+  background-color: #dddddd !important;
+  color: #000000 !important;
+}
+
+/* Formularfelder */
+body.kontrast input,
+body.kontrast select,
+body.kontrast textarea {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Platzhalter im Formular */
+body.kontrast input::placeholder,
+body.kontrast textarea::placeholder {
+  color: #cccccc !important;
+}
+
+/* FAQ Fragen */
+body.kontrast .faq-frage {
+  color: #ffffff !important;
+}
+
+body.kontrast .faq-icon {
+  color: #ffffff !important;
+}
+
+/* Sprachwechsler */
+body.kontrast .sprache {
+  background-color: #111111 !important;
+  border: 2px solid #ffffff;
+}
+
+body.kontrast .sprache button {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Footer Social Links */
+body.kontrast .footer-socials a {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* WhatsApp Button bleibt grün */
+body.kontrast .whatsapp-float {
+  background-color: #25d366 !important;
+  color: #ffffff !important;
+}
+
+/* ===== RESPONSIVE ERGÄNZUNG ===== */
+@media (max-width: 600px) {
+  .whatsapp-float {
+    right: 20px;
+    bottom: 20px;
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+
+  .accessibility-menu {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .accessibility-menu > button {
+    width: 52px;
+    height: 52px;
+    font-size: 23px;
+  }
+
+  .accessibility-panel {
+    width: 200px;
+  }
+
+  #back-to-top {
+    right: 22px;
+    bottom: 90px;
+  }
+}
+
+/* ===== WHATSAPP FLOAT BUTTON ===== */
+.whatsapp-float {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px) scale(1.05);
+  background-color: #1ebe5d;
+}
+
+/* ===== FOOTER SOCIAL MEDIA LINKS ===== */
+.footer-socials {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-socials a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background-color: #ffffff;
+  color: #1b5e20;
+  transform: translateY(-2px);
 }

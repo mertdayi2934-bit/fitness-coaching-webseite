@@ -77,6 +77,19 @@ const uebersetzungen = {
     faq3_antwort: "Die meisten Kunden sehen erste Ergebnisse bereits nach 2-4 Wochen. Nachhaltige Veränderungen entstehen in 3-6 Monaten.",
     faq4_frage:   "Kann ich das Paket jederzeit kündigen?",
     faq4_antwort: "Ja, alle Pakete sind monatlich kündbar. Keine versteckten Kosten, keine langen Vertragslaufzeiten.",
+    kontakt_text:     "Schreib mir – ich melde mich innerhalb von 24 Stunden!",
+    kontakt_ort:      "Augsburg, Deutschland",
+    kontakt_zeit:     "Mo–Fr, 08:00–20:00 Uhr",
+    kontakt_anrede:   "Anrede",
+    kontakt_name:     "Name",
+    kontakt_email:    "E-Mail",
+    kontakt_ziel:     "Dein Ziel",
+    kontakt_nachricht:"Nachricht",
+    kontakt_btn:      "Nachricht senden",
+    ziel_abnehmen:    "Abnehmen",
+    ziel_muskel:      "Muskelaufbau",
+    ziel_fitness:     "Allgemeine Fitness",
+    ziel_ernaehrung:  "Ernährungsberatung",
 },
 
   en: {
@@ -154,6 +167,19 @@ const uebersetzungen = {
     faq3_antwort: "Most clients see first results after 2-4 weeks. Sustainable changes happen within 3-6 months.",
     faq4_frage:   "Can I cancel the package at any time?",
     faq4_antwort: "Yes, all packages are cancellable monthly. No hidden costs, no long contract terms.",
+    kontakt_text:     "Write to me – I'll get back to you within 24 hours!",
+    kontakt_ort:      "Augsburg, Germany",
+    kontakt_zeit:     "Mon–Fri, 08:00–20:00",
+    kontakt_anrede:   "Title",
+    kontakt_name:     "Name",
+    kontakt_email:    "E-Mail",
+    kontakt_ziel:     "Your Goal",
+    kontakt_nachricht:"Message",
+    kontakt_btn:      "Send Message",
+    ziel_abnehmen:    "Lose weight",
+    ziel_muskel:      "Muscle gain",
+    ziel_fitness:     "General fitness",
+    ziel_ernaehrung:  "Nutrition advice",
 },
 
   ru: {
@@ -231,6 +257,19 @@ const uebersetzungen = {
     faq3_antwort: "Большинство клиентов видят первые результаты уже через 2-4 недели. Устойчивые изменения происходят за 3-6 месяцев.",
     faq4_frage:   "Могу ли я отменить пакет в любое время?",
     faq4_antwort: "Да, все пакеты можно отменить ежемесячно. Никаких скрытых расходов, никаких длительных контрактов.",
+    kontakt_text:     "Напиши мне – я отвечу в течение 24 часов!",
+    kontakt_ort:      "Аугсбург, Германия",
+    kontakt_zeit:     "Пн–Пт, 08:00–20:00",
+    kontakt_anrede:   "Обращение",
+    kontakt_name:     "Имя",
+    kontakt_email:    "Эл. почта",
+    kontakt_ziel:     "Твоя цель",
+    kontakt_nachricht:"Сообщение",
+    kontakt_btn:      "Отправить",
+    ziel_abnehmen:    "Похудеть",
+    ziel_muskel:      "Набор мышц",
+    ziel_fitness:     "Общий фитнес",
+    ziel_ernaehrung:  "Консультация по питанию",
 }
 
 };
@@ -266,4 +305,259 @@ function spracheWechseln(sprache) {
 function faqToggle(button) {
   const item = button.parentElement;
   item.classList.toggle('offen');
+
+  const istOffen = item.classList.contains('offen');
+  button.setAttribute('aria-expanded', istOffen);
 }
+// ===== SCROLL ANIMATION =====
+const beobachter = new IntersectionObserver(function(eintraege) {
+  eintraege.forEach(function(eintrag) {
+    if (eintrag.isIntersecting) {
+      eintrag.target.classList.add('sichtbar');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section').forEach(function(section) {
+  section.classList.add('versteckt');
+  beobachter.observe(section);
+});
+
+// ===== ZÄHLER ANIMATION =====
+function zaehlerAnimation(element, ziel, dauer) {
+  let start = 0;
+  const schritt = ziel / (dauer / 16);
+  const timer = setInterval(function() {
+    start += schritt;
+    if (start >= ziel) {
+      element.textContent = ziel + '+';
+      clearInterval(timer);
+    } else {
+      element.textContent = Math.floor(start) + '+';
+    }
+  }, 16);
+}
+
+const zaehlerBeobachter = new IntersectionObserver(function(eintraege) {
+  eintraege.forEach(function(eintrag) {
+    if (eintrag.isIntersecting) {
+      const ziel = parseInt(eintrag.target.getAttribute('data-ziel'));
+      zaehlerAnimation(eintrag.target, ziel, 2000);
+      zaehlerBeobachter.unobserve(eintrag.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-ziel]').forEach(function(el) {
+  zaehlerBeobachter.observe(el);
+});
+
+// ===== BACK TO TOP BUTTON =====
+const topButton = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 400) {
+    topButton.classList.add('sichtbar');
+  } else {
+    topButton.classList.remove('sichtbar');
+  }
+});
+
+topButton.addEventListener('click', function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ===== AKTIVER NAVIGATIONSLINK =====
+const sektionen = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', function() {
+  let aktuelle = '';
+  sektionen.forEach(function(sektion) {
+    const sektionTop = sektion.offsetTop - 100;
+    if (window.scrollY >= sektionTop) {
+      aktuelle = sektion.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(function(link) {
+    link.classList.remove('aktiv');
+    if (link.getAttribute('href') === '#' + aktuelle) {
+      link.classList.add('aktiv');
+    }
+  });
+});
+
+// ===== FORMULAR VALIDIERUNG =====
+formular.addEventListener('submit', function(e) {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const nachricht = document.getElementById('nachricht').value.trim();
+
+      if (!name || !email || !nachricht) {
+        e.preventDefault();
+        zeigeFehler('Bitte fülle alle Pflichtfelder aus!');
+        return;
+      }
+
+      if (!email.includes('@')) {
+        e.preventDefault();
+        zeigeFehler('Bitte gib eine gültige E-Mail Adresse ein!');
+        return;
+      }
+
+      zeigeErfolg('Danke ' + name + '! Ich melde mich innerhalb von 24 Stunden. 💪');
+    });
+
+function zeigeFehler(text) {
+  const meldung = document.getElementById('form-meldung');
+  meldung.textContent = text;
+  meldung.className = 'form-meldung fehler';
+  meldung.style.display = 'block';
+}
+
+function zeigeErfolg(text) {
+  const meldung = document.getElementById('form-meldung');
+  meldung.textContent = text;
+  meldung.className = 'form-meldung erfolg';
+  meldung.style.display = 'block';
+}
+// ===== BARRIEREFREIHEITS MENÜ =====
+function toggleAccessibilityMenu() {
+  const panel = document.getElementById('accessibility-panel');
+  panel.classList.toggle('offen');
+}
+
+// ===== TEXT TO SPEECH =====
+function textVorlesen() {
+  // Falls schon vorgelesen wird, zuerst stoppen
+  window.speechSynthesis.cancel();
+
+  // Nur Hauptbereiche vorlesen, nicht Navigation/Footer/Barrierefreiheitsmenü
+  const bereiche = document.querySelectorAll('section');
+
+  let gesamterText = '';
+
+  bereiche.forEach(function(section) {
+    const textelemente = section.querySelectorAll('h1, h2, h3, p, li');
+
+    textelemente.forEach(function(element) {
+      const text = element.textContent.trim();
+
+      if (text.length > 0) {
+        gesamterText += text + '. ';
+      }
+    });
+  });
+
+  if (gesamterText.length === 0) {
+    alert('Es wurde kein Text zum Vorlesen gefunden.');
+    return;
+  }
+
+  const sprache = document.documentElement.lang || 'de';
+  const ausgabe = new SpeechSynthesisUtterance(gesamterText);
+
+  if (sprache === 'en') {
+    ausgabe.lang = 'en-US';
+  } else if (sprache === 'ru') {
+    ausgabe.lang = 'ru-RU';
+  } else {
+    ausgabe.lang = 'de-DE';
+  }
+
+  ausgabe.rate = 0.9;
+  ausgabe.pitch = 1;
+  ausgabe.volume = 1;
+
+  window.speechSynthesis.speak(ausgabe);
+}
+
+function vorlesenStoppen() {
+  window.speechSynthesis.cancel();
+}
+
+// ===== SCHRIFTGRÖẞE VERSTELLEN =====
+let aktuelleSchriftgroesse = 100;
+
+function schriftgroesseAnwenden() {
+  const elemente = document.querySelectorAll(
+    'h1, h2, h3, p, li, a, button, label, input, textarea, select, span, strong'
+  );
+
+  elemente.forEach(function(element) {
+    // Ursprüngliche Schriftgröße nur einmal speichern
+    if (!element.dataset.originalFontSize) {
+      const aktuelleGroesse = window.getComputedStyle(element).fontSize;
+      element.dataset.originalFontSize = parseFloat(aktuelleGroesse);
+    }
+
+    const originalGroesse = parseFloat(element.dataset.originalFontSize);
+    const neueGroesse = originalGroesse * (aktuelleSchriftgroesse / 100);
+
+    element.style.fontSize = neueGroesse + 'px';
+  });
+}
+
+function schriftGroesser() {
+  if (aktuelleSchriftgroesse < 130) {
+    aktuelleSchriftgroesse += 10;
+    schriftgroesseAnwenden();
+    barrierefreiheitSpeichern();
+  }
+}
+
+function schriftKleiner() {
+  if (aktuelleSchriftgroesse > 80) {
+    aktuelleSchriftgroesse -= 10;
+    schriftgroesseAnwenden();
+    barrierefreiheitSpeichern();
+  }
+}
+
+// ===== KONTRAST MODUS =====
+function kontrastModus() {
+  document.body.classList.toggle('kontrast');
+}
+
+// ===== RESET =====
+function barrierefreiheitReset() {
+  aktuelleSchriftgroesse = 100;
+
+  const elemente = document.querySelectorAll(
+    'h1, h2, h3, p, li, a, button, label, input, textarea, select, span, strong'
+  );
+
+  elemente.forEach(function(element) {
+    element.style.fontSize = '';
+    delete element.dataset.originalFontSize;
+  });
+
+  document.body.classList.remove('kontrast');
+  window.speechSynthesis.cancel();
+
+  localStorage.removeItem('schriftgroesse');
+localStorage.removeItem('kontrastAktiv');
+}
+
+// ===== BARRIEREFREIHEIT EINSTELLUNGEN SPEICHERN =====
+function barrierefreiheitSpeichern() {
+  localStorage.setItem('schriftgroesse', aktuelleSchriftgroesse);
+  localStorage.setItem('kontrastAktiv', document.body.classList.contains('kontrast'));
+}
+
+function gespeicherteBarrierefreiheitLaden() {
+  const gespeicherteSchrift = localStorage.getItem('schriftgroesse');
+  const gespeicherterKontrast = localStorage.getItem('kontrastAktiv');
+
+  if (gespeicherteSchrift) {
+    aktuelleSchriftgroesse = parseInt(gespeicherteSchrift);
+    schriftgroesseAnwenden();
+  }
+
+  if (gespeicherterKontrast === 'true') {
+    document.body.classList.add('kontrast');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', gespeicherteBarrierefreiheitLaden);
